@@ -14,7 +14,7 @@
                 <p>Library</p>
             </div>
             <div class="btnCont">
-                <button>+</button>
+                <button class="addButton">+</button>
             </div>
         </div>
         <div class="contentCont">
@@ -40,6 +40,32 @@
                 <button>Remove</button>
             </div>
         </div>
+        <dialog id="addDialog">
+            <form method="dialog" class="addForm">
+                <label for="title">Book Title</label>
+                <input type="text" name="bookTitle" id="title">
+                <label for="author">Author</label>
+                <input type="text" name="bookAuthor" id="author">
+                <label for="pageNum">Number of Pages</label>
+                <input type="number" name="pageNumber" id="pageNum">
+                <fieldset>
+                    <legend>Have you read this book?</legend>
+                    <ul>
+                        <li>
+                            <label for="read">Read</label>
+                            <input type="radio" name="readStatus" id="read" value="read">
+                            
+                        </li>
+                        <li>
+                            <label for="notRead">Not Read</label>
+                            <input type="radio" name="readStatus" id="notRead" value="not_read" checked>
+                        </li>
+                    </ul>
+                </fieldset>
+                <button type="submit">Add</button>
+                <button class="cancelAdd">Cancel</button>
+            </form>
+        </dialog>
     </div>
     <script src="./script.js"></script>
 </body>
