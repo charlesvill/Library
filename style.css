@@ -52,15 +52,17 @@ body{
 .container{
     display:grid;
     grid-template-rows: 1fr 9fr;
-    background-color: antiquewhite;
+    background-color: #deeaee;
     height: 100%;
 }
 .header{
     display: flex;
     justify-content: space-between;
+    background-color: #eea29a;
     padding:1rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 600;
+    box-shadow:0.3em 0.3em .2em rgba(0, 0, 0, 0.3);
 }
 .logoCont{
     display:flex;
@@ -80,9 +82,112 @@ body{
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    background-color: aquamarine;
+    background-color: #b1cbbb;
     padding: 2rem;
     margin: 1rem;
     border-radius: 9px;
-
+    font-family: 'Courier New', Courier, monospace;
+    border-left: 6px solid #c94c4c;
+    box-shadow:0.3em 0.3em .3em rgba(0, 0, 0, 0.3);
+    line-height: 1.3rem;
 }
+.bookCont > p:first-child{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.isRead::after{
+    content: "✅";
+}
+.bookCont > p:nth-child(3){
+    font-size: 1.2rem;
+}
+.bookCont > p:nth-child(3)::before{
+    content: "Pages: ";
+    font-size: .9rem;
+}
+button{
+    font-family: 'Courier New', Courier, monospace;
+    border-style: none;
+    width: fit-content;
+    padding: .3rem;
+    margin: .3rem;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: #fff;
+}
+#addBtn {
+    background-color: #c94c4c;
+    border-radius: 40px;
+    width: 2rem;
+    height: 2rem;
+    color: whitesmoke;
+    font-size: 2rem;
+    padding: 0;
+    text-align: center;
+}
+#addBtn:hover, #addBtn:focus{
+    background-color:  #c94c4cbb;
+}
+dialog{
+    background-color: #deeaee;
+}
+form{
+    background-color: #deeaee;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.5rem;
+}
+fieldset > legend{
+    font-weight: bold;
+}
+ul>div{
+    display: flex;
+    justify-content: space-around;
+}
+input[type="radio"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+  }
+  input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em  #eea29a;
+  }
+  
+  input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+  .formBtnCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+       
+  }
+
+  .formBtnCont > button {
+    width: 4rem;
+    height: 2rem;
+    border-radius: 8px;
+
+  }
+
+  .formBtnCont > button:hover{
+    background-color: #eea29a;
+  }
