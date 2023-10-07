@@ -34,7 +34,7 @@
             </div>
         </div>
         <dialog id="addDialog">
-            <form method="dialog" class="addForm">
+            <form method="dialog" class="addForm" novalidate>
                 <label for="title">Book Title</label>
                 <input type="text" name="bookTitle" id="title" required>
                 <label for="author">Author</label>
@@ -48,7 +48,7 @@
                             <li>
                                 <label for="read">Read</label>
                                 <input type="radio" name="readStatus" id="read" value="read">
-                            
+
                             </li>
                             <li>
                                 <label for="notRead">Not Read</label>
@@ -58,6 +58,7 @@
                     </ul>
                 </fieldset>
                 <div class="formBtnCont">
+                    <span aria-live="polite" id="errorBox"></span>
                     <button type="submit">Add</button>
                     <button class="cancelAdd">Cancel</button>
                 </div>

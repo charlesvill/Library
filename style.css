@@ -191,3 +191,9 @@ input[type="radio"] {
   .formBtnCont > button:hover{
     background-color: #eea29a;
   }
+  .error{
+    font-size: .8rem;
+    color:red;
+    border: solid 2px red;
+    text-align: center;
+  }
